@@ -1,0 +1,32 @@
+
+
+
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">会员信息网</a>
+    </h1>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><%= link_to '首页', controller: 'welcome' %></li>
+        <li><%= link_to '会员列表', controller: 'members' %></li>
+      </ul>
+
+    </div>
+  </div>
+</header>
+
+<div class="get">
+  <div class="am-g">
+    <div class="am-u-lg-12">
+      <h1 class="get-title">欢迎访问“会员信息网”！</h1>
+
+      <p id="Datetime_Now"></p>
+      <p><%= link_to '访问百度首页', "http://www.baidu.com/", class: 'am-btn am-btn-sm get-btn' %></p>
+      <p>
+        <%= link_to '查看会员信息列表', members_path, class: 'am-btn am-btn-sm get-btn' %>
+      </p>
+    </div>
+  </div>
+</div>

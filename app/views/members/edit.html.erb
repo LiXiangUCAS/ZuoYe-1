@@ -1,0 +1,31 @@
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">会员信息网</a>
+    </h1>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><%= link_to '首页', controller: 'welcome' %></li>
+        <li class="am-active"><%= link_to '会员列表', controller: 'members' %></li>
+      </ul>
+
+    </div>
+  </div>
+</header>
+
+<div class="about">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="about-title about-color">编辑会员信息</h2>
+
+      <div class="am-g">
+        <div class="am-u-lg-12">
+            <%= render 'form' %>
+            <%= link_to '返回', members_path, class: "am-btn am-btn-primary am-btn-sm" %>
+          <hr class="am-article-divider am-show-sm-only">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

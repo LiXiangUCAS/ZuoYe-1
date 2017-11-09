@@ -1,0 +1,32 @@
+<%= form_with model: @member, local: true, class: "am-form" do |form| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:
+      </h2>
+      <ul>
+        <% @member.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.label :name, value: "姓名", class: "about-color" %>
+    <%= form.text_field :name, class: "form-control" %>
+            <br/>
+
+    <%= form.label :address, value: "地址", class: "about-color" %>
+    <%= form.text_field :address %>
+            <br/>
+
+    <%= form.label :age, value: "年龄", class: "about-color" %><br>
+    <%= form.text_field :age, class: "form-control" %>
+            <br/>
+
+  <div class="form-group">
+    <p>
+    <%= form.submit value: "提交", class: "am-btn am-btn-primary am-btn-sm" %>
+    </p>
+  </div>
+<% end %>

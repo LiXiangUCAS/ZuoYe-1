@@ -1,0 +1,43 @@
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">会员信息网</a>
+    </h1>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><%= link_to '首页', controller: 'welcome' %></li>
+        <li class="am-active"><%= link_to '会员列表', controller: 'members' %></li>
+      </ul>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="detail-h2">会员信息列表</h2>
+
+      <div class="am-g">
+<ul class="am-list">
+  <li>姓名:<%= @member.name %></li>
+  <li>地址:<%= @member.address %></li>
+  <li>年龄:<%= @member.age %></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hope">
+  <div class="am-g am-container">
+
+<%= link_to '编辑', edit_member_path(@member), class: "am-btn am-btn-primary" %>
+<%= link_to '返回', members_path, class: "am-btn am-btn-danger" %>
+
+
+  </div>
+</div>
